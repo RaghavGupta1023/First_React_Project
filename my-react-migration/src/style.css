@@ -1,0 +1,717 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  :root {
+    --primary-color: #a855f7;
+    --primary-dark: #9333ea;
+    --secondary-color: #d946ef;
+    --text-dark: #f3f4f6;
+    --text-light: #d1d5db;
+    --bg-light: #1f1f2e;
+    --bg-white: #0f0f1e;
+    --bg-darker: #0a0a14;
+    --border-color: #2d2d3d;
+    --shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.6);
+  }
+  
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--bg-darker);
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+  
+  .header {
+    background-color: #0f0f1e;
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 16px 0;
+  }
+  
+  .header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo h2 {
+    color: var(--primary-color);
+    font-size: 24px;
+    font-weight: 700;
+  }
+  
+  .nav {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+  }
+  
+  .nav a {
+    color: var(--text-dark);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .nav a:hover {
+    color: var(--primary-color);
+  }
+  
+  .btn-login {
+    background-color: var(--primary-color);
+    color: white !important;
+    padding: 8px 20px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-login:hover {
+    background-color: var(--primary-dark);
+  }
+  
+  .hero {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #1a0033 0%, #2d0052 100%);
+  }
+  
+  .hero .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+  
+  .hero-content {
+    max-width: 540px;
+  }
+  
+  .hero-title {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--text-dark);
+    margin-bottom: 24px;
+  }
+  
+  .hero-description {
+    font-size: 18px;
+    line-height: 1.8;
+    color: var(--text-light);
+    margin-bottom: 32px;
+  }
+  
+  .btn-cta {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 14px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-lg);
+  }
+  
+  .btn-cta:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(37, 99, 235, 0.3);
+  }
+  
+  .hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .search-illustration {
+    background-color: #1a1a2e;
+    padding: 60px;
+    border-radius: 16px;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border-color);
+  }
+  
+  .search-bar-demo {
+    background-color: #0f0f1e;
+    padding: 16px 24px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+  }
+  
+  .search-icon {
+    font-size: 20px;
+  }
+  
+  .search-text {
+    color: var(--text-light);
+    font-size: 16px;
+  }
+  
+  .search-engine-logo {
+    max-width: 100px; /* Adjust the size of the logo */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Add spacing below the logo */
+    display: block; /* Ensure proper alignment */
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .bing-logo{
+    max-width: 185px;
+  }
+  
+  .about {
+    padding: 80px 0;
+    background-color: var(--bg-darker);
+  }
+  
+  .section-title {
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 16px;
+    color: var(--text-dark);
+  }
+  
+  .section-description {
+    font-size: 18px;
+    line-height: 1.8;
+    color: var(--text-light);
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 48px;
+  }
+  
+  .about-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    margin-top: 48px;
+  }
+  
+  .about-card {
+    background-color: #1a1a2e;
+    padding: 32px;
+    border-radius: 12px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--border-color);
+  }
+  
+  .about-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-color);
+  }
+  
+  .card-icon {
+    font-size: 50px;
+    margin-bottom: 10px;
+  }
+  
+  .about-card h3 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: var(--text-dark);
+  }
+  
+  .about-card p {
+    color: var(--text-light);
+    line-height: 1.6;
+  }
+  
+  .features {
+    padding: 80px 0;
+    background-color: #141420;
+  }
+  
+  .features-grid1 {
+    display: flex;
+    flex-direction: column; /* Stack rows vertically */
+    gap: 20px; /* Add spacing between rows */
+  }
+  
+  .features-grid {
+    display: flex;
+    gap: 20px; /* Add spacing between rows */
+  }
+
+  .feature-row {
+    display: flex;
+    justify-content: center; /* Center the boxes horizontally */
+    gap: 20px; /* Add spacing between boxes in the same row */
+  }
+
+  .feature-card {
+    flex: 1; /* Allow the boxes to grow equally */
+    max-width: 200px; /* Set a maximum width for the boxes */
+    text-align: center;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #000000;
+  }
+
+  .feature-card:hover {
+    transform: scale(1.05); /* Slightly enlarge the box on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .cta-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
+    text-align: center;
+    color: white;
+    margin: 40px 0;
+  }
+  
+  .cta-section h2 {
+    font-size: 24px;
+    margin-bottom: 16px;
+    color: var(--text-light);
+  }
+  
+  .cta-section p {
+    font-size: 18px;
+    margin-bottom: 32px;
+    opacity: 0.9;
+  }
+  
+  .btn-cta-large {
+    background-color: white;
+    color: var(--primary-color);
+    font-size: 18px;
+    padding: 16px 40px;
+  }
+  
+  .btn-cta-large:hover {
+    background-color: var(--bg-light);
+    transform: translateY(-2px);
+  }
+  
+  .btn-cta {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: var(--blue-accent);
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    box-shadow: var(--shadow-lg);
+  }
+  
+  .btn-cta:hover {
+    background-color: var(--purple-main);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(37, 99, 235, 0.3);
+  }
+  
+  .footer {
+    background-color: #0a0a14;
+    color: white;
+    padding: 32px 0;
+    text-align: center;
+    border-top: 1px solid var(--border-color);
+  }
+  
+  .footer p {
+    opacity: 0.8;
+  }
+  
+  .login-page {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 48px;
+    background-color: #0f0f1e;
+  }
+  
+  .login-header {
+    margin-bottom: 40px;
+  }
+  
+  .back-link {
+    display: inline-block;
+    color: var(--text-light);
+    text-decoration: none;
+    margin-bottom: 24px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .back-link:hover {
+    color: var(--primary-color);
+  }
+  
+  .login-header h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--text-dark);
+  }
+  
+  .login-header p {
+    color: var(--text-light);
+    font-size: 16px;
+  }
+  
+  .login-form {
+    max-width: 400px;
+  }
+  
+  .form-group {
+    margin-bottom: 24px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--text-dark);
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+    background-color: #1a1a2e;
+    color: var(--text-dark);
+  }
+  
+  .form-group input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+  }
+  
+  .form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+  
+  .checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-light);
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .forgot-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  .forgot-link:hover {
+    text-decoration: underline;
+  }
+  
+  .btn-submit {
+    width: 100%;
+    padding: 14px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-submit:hover {
+    background-color: var(--primary-dark);
+  }
+  
+  .divider {
+    text-align: center;
+    margin: 24px 0;
+    position: relative;
+  }
+  
+  .divider::before,
+  .divider::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 45%;
+    height: 1px;
+    background-color: var(--border-color);
+  }
+  
+  .divider::before {
+    left: 0;
+  }
+  
+  .divider::after {
+    right: 0;
+  }
+  
+  .divider span {
+    background-color: #0f0f1e;
+    padding: 0 16px;
+    color: var(--text-light);
+    font-size: 14px;
+  }
+  
+  .signup-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: var(--text-light);
+  }
+  
+  .signup-link a {
+    color: var(--purple-main);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .signup-link a:hover {
+    color: var(--blue-accent);
+  }
+  
+  .signup-link {
+    text-align: center;
+    color: var(--text-light);
+    font-size: 14px;
+  }
+  
+  .signup-link a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .signup-link a:hover {
+    text-decoration: underline;
+  }
+  
+  .login-visual {
+    background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px;
+    color: white;
+  }
+  
+  .visual-content {
+    max-width: 400px;
+  }
+  
+  .visual-content h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+  
+  .visual-content p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 32px;
+    opacity: 0.9;
+  }
+  
+  .benefits-list {
+    list-style: none;
+  }
+  
+  .benefits-list li {
+    padding: 12px 0;
+    font-size: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .benefits-list li:last-child {
+    border-bottom: none;
+  }
+  
+  /* Left Section Logo */
+  .left-section-logo {
+    max-width: 100%; /* Ensure the image scales properly */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow for better aesthetics */
+    margin: 0 auto; /* Center the image horizontally */
+    display: block; /* Ensure proper centering */
+  }
+  
+  .quiz-button-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .btn-quiz {
+    display: inline-block;
+    padding: 14px 28px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    text-decoration: none;
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+  }
+  
+  .btn-quiz:hover {
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+    transform: translateY(-3px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1a1a2e;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+  }
+  
+  .cookie-banner p {
+    margin: 0;
+    display: inline-block;
+    font-size: 14px;
+  }
+  
+  .cookie-banner a {
+    color: var(--primary-color);
+    text-decoration: underline;
+  }
+  
+  .cookie-banner button {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  .cookie-banner button:hover {
+    background-color: var(--primary-dark);
+  }
+  
+  @media (max-width: 768px) {
+    .hero .container {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+  
+    .hero-title {
+      font-size: 36px;
+    }
+  
+    .search-illustration {
+      padding: 40px;
+    }
+  
+    .about-grid,
+    .features-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .nav {
+      gap: 16px;
+    }
+  
+    .login-page {
+      grid-template-columns: 1fr
+;
+    }
+  
+    .login-visual {
+      display: none;
+    }
+  
+    .login-container {
+      padding: 24px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hero-title {
+      font-size: 28px;
+    }
+  
+    .section-title {
+      font-size: 28px;
+    }
+  
+    .nav {
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+  }
+  .google-logo {
+    max-width: 150px; /* Adjust the size of the logo */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    margin: 0 auto; /* Center the logo horizontally */
+}
+
+.bing-logo {
+  max-width: 150px; /* Adjust the size of the logo */
+  height: auto; /* Maintain aspect ratio */
+  display: block;
+  margin: 0 auto; /* Center the logo horizontally */
+}
+
+.brave-logo {
+  max-width: 150px; /* Adjust the size of the logo */
+  height: auto; /* Maintain aspect ratio */
+  display: block;
+  margin: 0 auto; /* Center the logo horizontally */
+}
+
+.duckduckgo-logo {
+  max-width: 150px; /* Adjust the size of the logo */
+  height: auto; /* Maintain aspect ratio */
+  display: block;
+  margin: 0 auto; /* Center the logo horizontally */
+}
