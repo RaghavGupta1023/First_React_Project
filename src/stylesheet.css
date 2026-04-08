@@ -1,0 +1,221 @@
+:root {
+    --primary: #a855f7;
+    --primary-dark: #7c3aed;
+    --background: #0a0a14;
+    --card: #0f0f1e;
+    --text: #f3f4f6;
+    --text-muted: #d1d5db;
+    --border: #2d2d3d;
+    --input-bg: #1a1a2e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    min-height: 100vh;
+}
+
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+.top-bar {
+    margin-bottom: 2rem;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo-icon {
+    width: 2rem;
+    height: 2rem;
+    background-color: var(--primary);
+    border-radius: 0.5rem;
+}
+
+.logo-text {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.main-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 1000px;
+    height: 600px;
+    background-color: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 1rem;
+    display: flex;
+    overflow: hidden;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.login-left {
+    flex: 1;
+    position: relative;
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .login-left { display: block; }
+}
+
+.visual-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+    opacity: 0.9;
+}
+
+.visual-content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+    text-align: center;
+    color: white;
+}
+
+.visual-content h2 { font-size: 2rem; margin-bottom: 1rem; }
+
+.login-right {
+    flex: 1;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-title {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-group { margin-bottom: 1.5rem; }
+
+.form-group label {
+    display: block;
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-muted);
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: var(--input-bg);
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+    color: white;
+    outline: none;
+}
+
+.form-group input:focus { border-color: var(--primary); }
+
+.button-row { display: flex; justify-content: center; margin-top: 2rem; }
+
+.btn-gradient {
+    padding: 0.75rem 2.5rem;
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+    border: none;
+    border-radius: 0.5rem;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.btn-gradient:hover { transform: scale(1.05); }
+
+.links-row {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+}
+
+.links-row a {
+    color: var(--text-muted);
+    text-decoration: none;
+}
+
+.links-row a:hover { color: var(--primary); }
+
+.footer-bar {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text-muted);
+    font-size: 0.875rem;
+}
+
+.social-icons { display: flex; gap: 1rem; }
+
+.social-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    background-color: var(--text-muted);
+    border-radius: 50%;
+}
+
+/* Back to Home Link */
+.back-to-home {
+    position: absolute;
+    top: 40px; /* Adjust spacing from the top */
+    right: 20px; /* Adjust spacing from the left */
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.back-link {
+    color: var(--purple-main); /* Match the website's color scheme */
+    text-decoration:underline;
+    padding: 8px 12px;
+    border: 2px solid   var(--purple-main);
+    border-radius: 8px; /* Rounded corners for a softer look */
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+.back-link:hover {
+    background-color: var(--purple-main); /* Add a background on hover */
+    color: var(--bg-dark); /* Invert text color on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
