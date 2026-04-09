@@ -61,12 +61,12 @@ body {
 .login-card {
     width: 100%;
     max-width: 1000px;
-    height: 600px;
+    min-height: 600px;
     background-color: var(--card);
     border: 1px solid var(--border);
     border-radius: 1rem;
     display: flex;
-    overflow: hidden;
+    overflow: visible;
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
 }
 
